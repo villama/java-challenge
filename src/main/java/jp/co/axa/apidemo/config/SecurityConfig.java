@@ -38,8 +38,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .antMatchers("/", "/csrf", "/v2/api-docs", "/swagger-resources/**", "/swagger-ui.html",
             "/webjars/**")
         .permitAll()
+        .antMatchers("/h2-console/**").permitAll()
         .and()
         .httpBasic();
+
+    // Enable frames for the same origin (required for H2 Console)
+    http.headers().frameOptions().sameOrigin();
   }
 
   @Override

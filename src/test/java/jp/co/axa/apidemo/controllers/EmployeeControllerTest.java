@@ -115,7 +115,6 @@ public class EmployeeControllerTest {
     Employee existingEmployee = employees.get(0);
     Long employeeIdToUpdate = existingEmployee.getId();
 
-    // TODO: Should not be able to update id
     Employee updatedEmployee =
         Employee.builder().name("Michael Jordan").salary(60000000).department("Ballin").build();
 

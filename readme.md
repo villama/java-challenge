@@ -2,6 +2,7 @@
 
 - Install packages with `mvn package`
 - Run `mvn spring-boot:run` for starting the application (or use your IDE)
+- Format the code with: `mvn formatter:format`
 
 Application (with the embedded H2 database) is ready to be used ! You can access the url below for testing it :
 
